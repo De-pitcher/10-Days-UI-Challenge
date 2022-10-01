@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ten_days_ui_challenge/screens/authentication/login_page.dart';
+import 'package:ten_days_ui_challenge/screens/authentication/welcome_page.dart';
 import 'package:ten_days_ui_challenge/screens/onboarding/onbaording_page.dart';
 
 void main() {
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OnbaordingPage(),
+      home: const WelcomePage(),
+      // home: const OnbaordingPage(),
     );
   }
 }

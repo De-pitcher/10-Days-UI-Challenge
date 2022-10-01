@@ -18,61 +18,57 @@ class _OnbaordingPageState extends State<OnbaordingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Stack(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: PageView.builder(
-                  controller: controller,
-                  onPageChanged: (value) => setState(() {
-                    _currentIndex = value;
-                  }),
-                  itemBuilder: (content, index) {
-                    final content = onboardingContent[index];
-                    return OnboardingContent(
-                        image: content.image,
-                        title: content.title,
-                        text: content.text,
-                        animatedImage: content.animatedImage);
-                  },
-                  itemCount: onboardingContent.length,
-                ),
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: PageView.builder(
+                controller: controller,
+                onPageChanged: (value) => setState(() {
+                  _currentIndex = value;
+                }),
+                itemBuilder: (content, index) {
+                  final content = onboardingContent[index];
+                  return OnboardingContent(
+                      image: content.image,
+                      title: content.title,
+                      text: content.text,
+                      animatedImage: content.animatedImage);
+                },
+                itemCount: onboardingContent.length,
               ),
-              Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(height: MediaQuery.of(context).size.height * 0.6),
-                    SmoothPageIndicator(
-                      onDotClicked: (index) => controller.animateToPage(
-                          index + 1,
-                          duration: const Duration(milliseconds: 300),
-                          curve: Curves.easeInOut),
-                      controller: controller,
-                      count: onboardingContent.length,
-                      effect: const WormEffect(
-                        spacing: 4,
-                        radius: 8,
-                        dotWidth: 10,
-                        dotHeight: 10,
-                        dotColor: Color(0xFFB4B1CF),
-                        activeDotColor: Color(0xFF453988),
-                      ),
+            ),
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.6),
+                  SmoothPageIndicator(
+                    onDotClicked: (index) => controller.animateToPage(index + 1,
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.easeInOut),
+                    controller: controller,
+                    count: onboardingContent.length,
+                    effect: const WormEffect(
+                      spacing: 4,
+                      radius: 8,
+                      dotWidth: 10,
+                      dotHeight: 10,
+                      dotColor: Color(0xFFB4B1CF),
+                      activeDotColor: Color(0xFF453988),
                     ),
-                    const SizedBox(height: 70),
-                    Hero(
-                      tag: 'animatedImage',
-                      transitionOnUserGestures: true,
-                      child: SvgPicture.asset(
-                          onboardingContent[_currentIndex].animatedImage),
-                    )
-                  ],
-                ),
+                  ),
+                  const SizedBox(height: 50),
+                  Hero(
+                    tag: 'animatedImage',
+                    transitionOnUserGestures: true,
+                    child: SvgPicture.asset(
+                        onboardingContent[_currentIndex].animatedImage),
+                  )
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,4 +1,5 @@
-
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ten_days_ui_challenge/screens/onboarding/onboarding_content.dart';
 
 final onboardingContent = <OnboardingContent>[
@@ -23,3 +24,30 @@ final onboardingContent = <OnboardingContent>[
     animatedImage: 'assets/icons/Button(2).svg',
   ),
 ];
+
+const color1 = Color(0xFFB6EDFF);
+const color2 = Color(0xFF191720);
+InputDecoration textFieldInputDecoration(String hintText) => InputDecoration(
+      hintText: hintText,
+      hintStyle: GoogleFonts.roboto(
+        fontSize: 18,
+        color: const Color(0xFF82838F),
+        fontWeight: FontWeight.normal,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: const BorderSide(color: Color(0xFF3F3F48)),
+      ),
+      disabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: const BorderSide(color: Color(0xFF3F3F48)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: const BorderSide(color: Color(0xFF3F3F48)),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: const BorderSide(color: Color(0xFF3F3F48)),
+      ),
+    );
