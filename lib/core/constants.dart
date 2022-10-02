@@ -27,6 +27,18 @@ final onboardingContent = <OnboardingContent>[
 
 const color1 = Color(0xFFB6EDFF);
 const color2 = Color(0xFF191720);
+const color3 = Color(0xFF405572);
+
+final textStyle1 = GoogleFonts.rubik(
+  fontSize: 16,
+  fontWeight: FontWeight.normal,
+  color: const Color(0xFF334968),
+);
+final textStyle2 = GoogleFonts.rubik(
+  fontSize: 20,
+  fontWeight: FontWeight.normal,
+  color: const Color(0xFF334968),
+);
 InputDecoration textFieldInputDecoration(String hintText) => InputDecoration(
       hintText: hintText,
       hintStyle: GoogleFonts.roboto(
