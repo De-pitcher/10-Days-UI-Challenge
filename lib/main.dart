@@ -4,6 +4,7 @@ import 'package:ten_days_ui_challenge/screens/authentication/welcome_page.dart';
 import 'package:ten_days_ui_challenge/screens/messaging/users_page.dart';
 import 'package:ten_days_ui_challenge/screens/onboarding/onbaording_page.dart';
 import 'package:ten_days_ui_challenge/screens/profile_page.dart';
+import 'package:ten_days_ui_challenge/screens/search/start_search_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const UsersPage(),
+      home: const StartSearchPage(),
       // home: const OnbaordingPage(),
     );
   }

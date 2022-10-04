@@ -30,6 +30,8 @@ const color1 = Color(0xFFB6EDFF);
 const color2 = Color(0xFF191720);
 const color3 = Color(0xFF405572);
 const color4 = Color(0xFF0041FD);
+const color5 = Color(0xFF39455F);
+const color6 = Color(0xFF81848B);
 const whiteTextColor = Color(0xFFEAEBEF);
 const greyTextColor = Color(0xFF373737);
 

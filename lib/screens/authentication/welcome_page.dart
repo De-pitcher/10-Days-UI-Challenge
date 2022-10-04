@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ten_days_ui_challenge/core/constants.dart';
 import 'package:ten_days_ui_challenge/screens/authentication/login_page.dart';
-import 'package:ten_days_ui_challenge/screens/custom_button.dart';
+import 'package:ten_days_ui_challenge/widgets/custom_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
